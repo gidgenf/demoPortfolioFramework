@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                    <img id="profile-pic" src="images/profilepic.jpg" alt="Logo" class="me-3">
+                    <h1 class="first-h1">Gonzalo Diaz</h1>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./" tabindex="1">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about-me" tabindex="2">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects" tabindex="3">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact-me" tabindex="4">Contact</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about-me" class="first" tabindex="5">
+            <div class="self-introduction">
+                <h2>Im Gonzalo Diaz</h2>
+                <p style="text-align: center;">
+                    I am a web development student looking to expand my knowledge in the IT area.</p>
+            </div>
+        </section>
+        <br>
+
+        <section class="second" tabindex="6">
+            <h2>About me</h2>
+            <div class="grid">
+                <div>
+                    <p style="text-align: center; justify-content: center; margin: 30px;">
+                        I am currently studying to become a full stack while looking for my first experience in the IT
+                        field.
+                    </p>
+                </div>
+                <div class="skills-container">
+                    <h2>My skills</h2>
+                    <ul class="skills">
+                        <li>HTML</li>
+                        <li>Java Script</li>
+                        <li>CSS</li>
+                        <li>Bootstrap</li>
+                        <li>Git</li>
+                        <li>Github</li>
+                        <li>Node.js</li>
+                        <li>Responsive Desing</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <h2 id="projects">See my projects</h2>
+
+        <div class="grid container" tabindex="7">
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="https://gidgenf.github.io/ResponsiveStylesheetFinalProject/" target="_blank">
+                            <img src="images/colors.png" alt="colors">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://gidgenf.github.io/Learn-Japanese/" target="_blank">
+                            <img src="images/learnj.png" alt="learnj">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://gidgenf.github.io/tarjetas-pokemon/" target="_blank">
+                            <img src="images/pokecards.png" alt="pokecards">
+                        </a>
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" onclick="changeText()"
+                    data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" onclick="changeText()"
+                    data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="project-description-container">
+                <p id="project-description" onload="changeText()">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id aspernatur nobis optio non laborum
+                    reprehenderit tempora ex odio sapiente delectus est dicta facere illum ducimus odit, suscipit
+                    incidunt obcaecati beatae?
+                </p>
+            </div>
+        </div>
+
+        <section id="contact-me" class="container mt-5" tabindex="8">
+            <form id="contact-form" class="contact-form" action="post" method="post">
+                <h2 class="mb-4">Contact me</h2>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-form">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer tabindex="9">
+        <h3>Social Links</h3>
+        <div class="social-links">
+            <a href="#"><img class="logo-icon" src="images/instagramlogo.png" alt="instagram"></a>
+            <a href="#"><img class="logo-icon" src="images/linkedinlogo.png" alt="linkeding"></a>
+            <a href="#"><img class="logo-icon" src="images/twitterlogo.png" alt="twitter"></a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="script/script.js"></script>
+</body>
+
+</html>
